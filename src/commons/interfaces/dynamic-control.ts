@@ -23,7 +23,7 @@ export interface DynamicFieldData {
     fieldName: string;
     placeholder?: string;
     defaultValue: any;
-    variant: FieldVariant;
+    variant?: FieldVariant;
     range: InputRange;
     icon?: IconNames;
     fullWidth?: boolean;

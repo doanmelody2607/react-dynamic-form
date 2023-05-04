@@ -15,7 +15,6 @@ const Radior: FC<DynamicFieldData> = ({
     label,
     fieldName,
     defaultValue,
-    variant,
     range,
     fullWidth = true,
     radioOptions = [],
@@ -32,7 +31,6 @@ const Radior: FC<DynamicFieldData> = ({
                 render={({ field: { value, onChange }, fieldState: { error } }) => {
                     return (
                         <FormControl
-                            variant={variant}
                             fullWidth={fullWidth}
                             required={!!config.required}
                             error={!!error}

@@ -5,3 +5,4 @@ export { default as SingleSelect } from './SingleSelect';
 export { default as MultipleSelect } from './MultipleSelect';
 export { default as Radior } from './Radior';
 export { default as Checkboxx } from './Checkboxx';
+export { default as Password } from './Password';

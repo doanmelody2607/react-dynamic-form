@@ -9,7 +9,7 @@ const Text: FC<DynamicFieldData> = ({
     fieldName,
     placeholder,
     defaultValue,
-    variant,
+    variant = 'standard',
     range,
     icon,
     fullWidth = true,

@@ -1,7 +1,16 @@
 import { FC } from 'react';
 
 import { DynamicFieldData } from '~/commons/interfaces/dynamic-control';
-import { Text, Number, Textarea, SingleSelect, MultipleSelect, Radior, Checkboxx } from './Fields';
+import {
+    Text,
+    Number,
+    Textarea,
+    SingleSelect,
+    MultipleSelect,
+    Radior,
+    Checkboxx,
+    Password,
+} from './Fields';
 
 const DynamicControl: FC<DynamicFieldData> = (fieldData) => {
     switch (fieldData.inputType) {
@@ -19,6 +28,8 @@ const DynamicControl: FC<DynamicFieldData> = (fieldData) => {
             return <Radior {...fieldData} />;
         case 'checkbox':
             return <Checkboxx {...fieldData} />;
+        case 'password':
+            return <Password {...fieldData} />;
         default:
             return <input type="text" />;
     }

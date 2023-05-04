@@ -5,6 +5,7 @@ export type FieldType =
     | 'multiselect'
     | 'number'
     | 'radio'
-    | 'checkbox';
+    | 'checkbox'
+    | 'password';
 
 export type FieldVariant = 'outlined' | 'filled' | 'standard';

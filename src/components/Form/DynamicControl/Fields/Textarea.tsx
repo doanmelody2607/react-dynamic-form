@@ -8,7 +8,7 @@ const Textarea: FC<DynamicFieldData> = ({
     fieldName,
     placeholder,
     defaultValue,
-    variant,
+    variant = 'standard',
     range,
     fullWidth = true,
     config = {},
@@ -33,6 +33,7 @@ const Textarea: FC<DynamicFieldData> = ({
                             required={!!config.required}
                             error={!!error}
                             helperText={error && `${label} ${error?.message}`}
+                            spellCheck={false}
                             {...field}
                         />
                     );

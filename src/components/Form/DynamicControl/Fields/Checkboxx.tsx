@@ -17,7 +17,6 @@ const Checkboxx: FC<DynamicFieldData> = ({
     label,
     fieldName,
     defaultValue,
-    variant,
     range,
     fullWidth = true,
     radioOptions = [],
@@ -41,7 +40,6 @@ const Checkboxx: FC<DynamicFieldData> = ({
                 render={({ field: { value, onChange }, fieldState: { error } }) => {
                     return (
                         <FormControl
-                            variant={variant}
                             fullWidth={fullWidth}
                             required={!!config.required}
                             error={!!error}

@@ -1,21 +1,32 @@
-import { Grid, InputAdornment, TextField } from '@mui/material';
-import { FC } from 'react';
+import { Visibility, VisibilityOff } from '@mui/icons-material';
+import { Grid, IconButton, InputAdornment, TextField } from '@mui/material';
+import { FC, useState } from 'react';
 import { Controller, useFormContext } from 'react-hook-form';
 import { DynamicFieldData } from '~/commons/interfaces/dynamic-control';
-import DynamicIcon from '~/components/Form/DynamicControl/Icon';
 
-const Number: FC<DynamicFieldData> = ({
+const Password: FC<DynamicFieldData> = ({
     label,
     fieldName,
     placeholder,
     defaultValue,
     variant = 'standard',
     range,
-    icon,
     fullWidth = true,
     config = {},
 }) => {
+    // React-hook-form
     const { control } = useFormContext();
+
+    // Hook
+    const [showPassword, setShowPassword] = useState<boolean>(false);
+
+    const handleClickShowPassword = () => {
+        setShowPassword((prev) => !prev);
+    };
+
+    const handleMouseDownPassword = (event: React.MouseEvent<HTMLButtonElement>) => {
+        event.preventDefault();
+    };
 
     return (
         <Grid xs={range.xs} sm={range.sm} item>
@@ -26,7 +37,7 @@ const Number: FC<DynamicFieldData> = ({
                 render={({ field, fieldState: { error } }) => {
                     return (
                         <TextField
-                            type="number"
+                            type={showPassword ? 'text' : 'password'}
                             label={label}
                             placeholder={placeholder}
                             variant={variant}
@@ -34,13 +45,16 @@ const Number: FC<DynamicFieldData> = ({
                             InputProps={{
                                 endAdornment: (
                                     <InputAdornment position="end">
-                                        {icon && <DynamicIcon iconName={icon} />}
+                                        <IconButton
+                                            aria-label="toggle password visibility"
+                                            onClick={handleClickShowPassword}
+                                            onMouseDown={handleMouseDownPassword}
+                                            edge="end"
+                                        >
+                                            {showPassword ? <VisibilityOff /> : <Visibility />}
+                                        </IconButton>
                                     </InputAdornment>
                                 ),
-                                // inputProps: {
-                                //     max: 100,
-                                //     min: 10,
-                                // },
                             }}
                             required={!!config.required}
                             error={!!error}
@@ -55,4 +69,4 @@ const Number: FC<DynamicFieldData> = ({
     );
 };
 
-export default Number;
+export default Password;

@@ -4,6 +4,18 @@ import { FieldValues, FormProvider, SubmitHandler, useForm } from 'react-hook-fo
 import Form from '~/components/Form';
 import { fields } from './data';
 
+export interface DataSubmit {
+    name: string;
+    address: string;
+    phone: string;
+    information: string;
+    gender: string | number;
+    hobbies: (string | number)[];
+    email: string;
+    status: boolean;
+    friends: (string | number)[];
+}
+
 const App: FC = () => {
     const margin = { margin: '0 5px' };
 
@@ -37,10 +49,6 @@ const App: FC = () => {
 
                             <Typography variant="subtitle1" color="textSecondary">
                                 Fill all the mandatory fields to create an account.
-                            </Typography>
-
-                            <Typography variant="body2" align="left" gutterBottom>
-                                Personal Info :{' '}
                             </Typography>
 
                             <FormProvider {...formMethods}>

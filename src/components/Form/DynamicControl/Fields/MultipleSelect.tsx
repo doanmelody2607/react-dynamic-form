@@ -16,7 +16,7 @@ const MultipleSelect: FC<DynamicFieldData> = ({
     label,
     fieldName,
     defaultValue,
-    variant,
+    variant = 'standard',
     range,
     fullWidth = true,
     selectOptions = [],

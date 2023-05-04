@@ -1,85 +1,84 @@
 import { DynamicFieldData } from '~/commons/interfaces/dynamic-control';
 
 export const fields: DynamicFieldData[] = [
-    // {
-    //     inputType: 'text',
-    //     fieldName: 'name',
-    //     label: 'Name',
-    //     placeholder: 'Enter your name',
-    //     defaultValue: '',
-    //     variant: 'standard',
-    //     icon: 'AccountCircle',
-    //     range: {
-    //         xs: 12,
-    //         sm: 4,
-    //     },
-    //     config: {
-    //         required: {
-    //             value: true,
-    //             message: 'is required!',
-    //         },
-    //     },
-    // },
-    // {
-    //     inputType: 'text',
-    //     fieldName: 'address',
-    //     label: 'Address',
-    //     placeholder: 'Enter your address',
-    //     defaultValue: '',
-    //     variant: 'standard',
-    //     icon: 'Home',
-    //     range: {
-    //         xs: 12,
-    //         sm: 4,
-    //     },
-    //     config: {
-    //         required: false,
-    //     },
-    // },
-    // {
-    //     inputType: 'text',
-    //     fieldName: 'phoneNumber',
-    //     label: 'Phone',
-    //     placeholder: 'Enter your phone',
-    //     defaultValue: '',
-    //     variant: 'standard',
-    //     icon: 'PhoneIphone',
-    //     range: {
-    //         xs: 12,
-    //         sm: 4,
-    //     },
-    //     config: {
-    //         required: {
-    //             value: true,
-    //             message: 'is required!',
-    //         },
-    //         pattern: {
-    //             value: /(84|0[3|5|7|8|9])+([0-9]{8})\b/g,
-    //             message: 'is invalid!',
-    //         },
-    //     },
-    // },
-    // {
-    //     inputType: 'textarea',
-    //     fieldName: 'information',
-    //     label: 'Information',
-    //     placeholder: 'Enter your information',
-    //     defaultValue: '',
-    //     variant: 'standard',
-    //     range: {
-    //         xs: 12,
-    //         sm: 12,
-    //     },
-    //     config: {
-    //         required: false,
-    //     },
-    // },
+    {
+        inputType: 'text',
+        fieldName: 'name',
+        label: 'Name',
+        placeholder: 'Enter your name',
+        defaultValue: '',
+        icon: 'AccountCircle',
+        range: {
+            xs: 12,
+            sm: 4,
+        },
+        config: {
+            required: {
+                value: true,
+                message: 'is required!',
+            }
+        },
+    },
+    {
+        inputType: 'text',
+        fieldName: 'phone',
+        label: 'Phone',
+        placeholder: 'Enter your phone',
+        defaultValue: '',
+        icon: 'PhoneIphone',
+        range: {
+            xs: 12,
+            sm: 4,
+        },
+        config: {
+            required: {
+                value: true,
+                message: 'is required!',
+            },
+            pattern: {
+                value: /(84|0[3|5|7|8|9])+([0-9]{8})\b/g,
+                message: 'is invalid!',
+            },
+        },
+    },
+    {
+        inputType: 'text',
+        fieldName: 'email',
+        label: 'Email',
+        placeholder: 'Enter your email',
+        defaultValue: '',
+        icon: 'Email',
+        range: {
+            xs: 12,
+            sm: 4,
+        },
+        config: {
+            required: {
+                value: true,
+                message: 'is required!',
+            },
+            pattern: {
+                value: /\S+@\S+\.\S+/,
+                message: 'does not match email format',
+            },
+        },
+    },
+    {
+        inputType: 'textarea',
+        fieldName: 'information',
+        label: 'Information',
+        placeholder: 'Enter your information',
+        defaultValue: '',
+        range: {
+            xs: 12,
+            sm: 12,
+        },
+    },
     {
         inputType: 'select',
         fieldName: 'gender',
         label: 'Gender',
         defaultValue: '',
-        variant: 'standard',
         range: {
             xs: 12,
             sm: 6,
@@ -93,7 +92,6 @@ export const fields: DynamicFieldData[] = [
                 value: true,
                 message: 'is required!',
             },
-            valueAsNumber: true,
         },
     },
     {
@@ -101,7 +99,6 @@ export const fields: DynamicFieldData[] = [
         fieldName: 'hobbies',
         label: 'Hobbies',
         defaultValue: [],
-        variant: 'standard',
         range: {
             xs: 12,
             sm: 6,
@@ -120,34 +117,10 @@ export const fields: DynamicFieldData[] = [
         },
     },
     {
-        inputType: 'text',
-        fieldName: 'email',
-        label: 'Email',
-        placeholder: 'Enter your email',
-        defaultValue: '',
-        variant: 'standard',
-        icon: 'Email',
-        range: {
-            xs: 12,
-            sm: 6,
-        },
-        config: {
-            required: {
-                value: true,
-                message: 'is required!',
-            },
-            pattern: {
-                value: /\S+@\S+\.\S+/,
-                message: 'does not match email format',
-            },
-        },
-    },
-    {
         inputType: 'radio',
         fieldName: 'status',
         label: 'Status',
         defaultValue: true,
-        variant: 'standard',
         range: {
             xs: 12,
             sm: 6,
@@ -156,16 +129,12 @@ export const fields: DynamicFieldData[] = [
             { value: true, label: 'Enabled' },
             { value: false, label: 'Disabled' },
         ],
-        config: {
-            required: false,
-        },
     },
     {
         inputType: 'checkbox',
         fieldName: 'friends',
         label: 'Friends',
         defaultValue: [11, 33],
-        variant: 'standard',
         range: {
             xs: 12,
             sm: 6,
@@ -176,4 +145,26 @@ export const fields: DynamicFieldData[] = [
             { value: 33, label: 'Doan' },
         ],
     },
+    // Password
+    // {
+    //     inputType: 'password',
+    //     fieldName: 'password',
+    //     label: 'Password',
+    //     placeholder: 'Enter your password',
+    //     defaultValue: '',
+    //     range: {
+    //         xs: 12,
+    //         sm: 6,
+    //     },
+    //     config: {
+    //         required: {
+    //             value: true,
+    //             message: 'is required!',
+    //         },
+    //         minLength: {
+    //             value: 8,
+    //             message: 'should be at least 8 characters'
+    //         }
+    //     },
+    // },
 ];
