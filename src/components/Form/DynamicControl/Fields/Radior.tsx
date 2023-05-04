@@ -17,7 +17,7 @@ const Radior: FC<DynamicFieldData> = ({
     defaultValue,
     range,
     fullWidth = true,
-    radioOptions = [],
+    options = [],
     config = {},
 }) => {
     const { control } = useFormContext();
@@ -37,7 +37,7 @@ const Radior: FC<DynamicFieldData> = ({
                         >
                             <FormLabel>{label}</FormLabel>
                             <RadioGroup row>
-                                {radioOptions.map((option, index) => (
+                                {options.map((option, index) => (
                                     <FormControlLabel
                                         key={index}
                                         value={option.value}

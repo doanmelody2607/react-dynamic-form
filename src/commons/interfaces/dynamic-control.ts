@@ -2,13 +2,8 @@ import { RegisterOptions } from 'react-hook-form';
 import { FieldType, FieldVariant } from '~/commons/types/input';
 import { IconNames } from '~/commons/types/icon';
 
-export interface SelectOption {
-    value: string | number;
-    label: string;
-}
-
-export interface RadioOption {
-    value: string | number | boolean;
+export interface Option {
+    value: any;
     label: string;
 }
 
@@ -27,7 +22,6 @@ export interface DynamicFieldData {
     range: InputRange;
     icon?: IconNames;
     fullWidth?: boolean;
-    selectOptions?: SelectOption[];
-    radioOptions?: RadioOption[];
+    options?: Option[];
     config?: RegisterOptions;
 }

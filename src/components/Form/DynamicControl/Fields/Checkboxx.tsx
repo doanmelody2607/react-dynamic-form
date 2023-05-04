@@ -19,7 +19,7 @@ const Checkboxx: FC<DynamicFieldData> = ({
     defaultValue,
     range,
     fullWidth = true,
-    radioOptions = [],
+    options = [],
     config = {},
 }) => {
     const { control } = useFormContext();
@@ -46,7 +46,7 @@ const Checkboxx: FC<DynamicFieldData> = ({
                         >
                             <FormLabel>{label}</FormLabel>
                             <FormGroup row>
-                                {radioOptions.map((option, index) => {
+                                {options.map((option, index) => {
                                     return (
                                         <FormControlLabel
                                             key={index}

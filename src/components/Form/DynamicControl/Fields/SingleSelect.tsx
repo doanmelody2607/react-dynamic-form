@@ -10,7 +10,7 @@ const SingleSelect: FC<DynamicFieldData> = ({
     variant = 'standard',
     range,
     fullWidth = true,
-    selectOptions = [],
+    options = [],
     config = {},
 }) => {
     const { control } = useFormContext();
@@ -31,7 +31,7 @@ const SingleSelect: FC<DynamicFieldData> = ({
                         >
                             <InputLabel>{label}</InputLabel>
                             <Select {...field}>
-                                {selectOptions.map((option, index) => (
+                                {options.map((option, index) => (
                                     <MenuItem key={index} value={option.value}>
                                         {option.label}
                                     </MenuItem>

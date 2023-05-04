@@ -17,6 +17,7 @@ export interface DataSubmit {
 }
 
 const App: FC = () => {
+    console.log('List Fields: ', fields);
     const margin = { margin: '0 5px' };
 
     const formMethods = useForm({
@@ -30,7 +31,7 @@ const App: FC = () => {
     } = formMethods;
 
     const onSubmit: SubmitHandler<FieldValues> = (data) => {
-        console.log('Form values: ', data);
+        console.log('Form Submit: ', data);
     };
 
     const handleReset = () => {

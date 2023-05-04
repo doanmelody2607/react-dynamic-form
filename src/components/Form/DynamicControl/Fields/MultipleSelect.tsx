@@ -19,7 +19,7 @@ const MultipleSelect: FC<DynamicFieldData> = ({
     variant = 'standard',
     range,
     fullWidth = true,
-    selectOptions = [],
+    options = [],
     config = {},
 }) => {
     const { control } = useFormContext();
@@ -44,7 +44,7 @@ const MultipleSelect: FC<DynamicFieldData> = ({
                                 renderValue={(selected) => selected.join(', ')}
                                 {...field}
                             >
-                                {selectOptions.map((option, index) => (
+                                {options.map((option, index) => (
                                     <MenuItem key={index} value={option.value}>
                                         <Checkbox
                                             checked={field.value?.includes(option.value)}

@@ -83,7 +83,7 @@ export const fields: DynamicFieldData[] = [
             xs: 12,
             sm: 6,
         },
-        selectOptions: [
+        options: [
             { value: 'male', label: 'Male' },
             { value: 'female', label: 'Female' },
         ],
@@ -103,7 +103,7 @@ export const fields: DynamicFieldData[] = [
             xs: 12,
             sm: 6,
         },
-        selectOptions: [
+        options: [
             { value: 'football', label: 'Football' },
             { value: 'cycling', label: 'Cycling' },
             { value: 'kickboxing', label: 'Kickboxing' },
@@ -125,7 +125,7 @@ export const fields: DynamicFieldData[] = [
             xs: 12,
             sm: 6,
         },
-        radioOptions: [
+        options: [
             { value: true, label: 'Enabled' },
             { value: false, label: 'Disabled' },
         ],
@@ -139,7 +139,7 @@ export const fields: DynamicFieldData[] = [
             xs: 12,
             sm: 6,
         },
-        radioOptions: [
+        options: [
             { value: 11, label: 'Bill' },
             { value: 22, label: 'Luo' },
             { value: 33, label: 'Doan' },
