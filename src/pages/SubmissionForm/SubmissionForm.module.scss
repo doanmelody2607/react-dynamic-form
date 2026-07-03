@@ -1,0 +1,56 @@
+.image-wrapper {
+    position: relative;
+    display: inline-block;
+    border-radius: 12px;
+
+    img {
+        display: block;
+        width: 100%;
+        border-radius: inherit;
+        position: relative;
+        z-index: 2;
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        inset: -4px;
+        border-radius: 16px;
+        border: 2px solid #2da8ff;
+        box-shadow:
+            0 0 10px #2da8ff,
+            0 0 20px #2da8ff,
+            0 0 20px rgba(45, 168, 255, 0.8),
+            0 0 20px rgba(45, 168, 255, 0.5);
+
+        pointer-events: none;
+        z-index: 1;
+    }
+}
+
+.image-wrapper::before {
+    animation: neonGlow 2s ease-in-out infinite alternate;
+}
+
+@keyframes neonGlow {
+    from {
+        box-shadow:
+            0 0 6px #2da8ff,
+            0 0 15px #2da8ff,
+            0 0 30px rgba(45, 168, 255, 0.6);
+    }
+
+    to {
+        box-shadow:
+            0 0 12px #2da8ff,
+            0 0 30px #2da8ff,
+            0 0 60px rgba(45, 168, 255, 0.9);
+    }
+}
+
+.red-btn {
+    color: var(--white);
+    background: #d32f2f;
+    padding: 4px 8px;
+    border-radius: 4px;
+}

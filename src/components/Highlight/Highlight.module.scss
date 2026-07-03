@@ -1,0 +1,22 @@
+.wrapper {
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-weight: 600;
+    color: var(--black);
+
+    &.vang {
+        background-color: #fff3cd;
+        color: var(--color_11);
+    }
+
+    &.xanh {
+        background-color: #4bc948;
+        // color: var(--color_11);
+        color: var(--white);
+    }
+
+    &.do {
+        background-color: #df4c38;
+        color: var(--white);
+    }
+}

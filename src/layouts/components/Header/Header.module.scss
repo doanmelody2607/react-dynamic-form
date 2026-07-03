@@ -1,0 +1,29 @@
+.wrapper {
+    height: var(--default-layout-header-height);
+    background: #fff;
+    border-bottom: 1px solid #e0e0e0;
+    padding: 0 20px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+
+    .title {
+        font-size: 14px;
+        font-weight: 700;
+        color: #b71c1c;
+    }
+
+    .user-role {
+        background: #ffebee;
+        color: #c62828;
+        padding: 4px 12px;
+        border-radius: 20px;
+        font-size: 11px;
+        font-weight: 700;
+    }
+}
